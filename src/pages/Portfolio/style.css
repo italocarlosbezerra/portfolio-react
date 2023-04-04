@@ -1,0 +1,25 @@
+HTML {
+   font-size: 62.5%;
+}
+
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+:root {
+   --dark-blue: #181823;
+   --light-blue: #537fe7;
+   --light-green: #c0eef2;
+   --pale-white: #e9f8f9;
+
+   --highlight-font: "Roboto Mono", monospace;
+   --font-default: "Montserrat", sans-serif;
+}
+
+body {
+   max-width: 1920px;
+   margin: auto;
+   background-color: var(--dark-blue);
+}
