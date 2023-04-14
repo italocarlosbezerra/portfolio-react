@@ -1,0 +1,19 @@
+.intro {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   border-bottom: 1px solid var(--pale-white);
+   padding: 40px;
+}
+
+.intro_text {
+   font-size: 48px;
+   font-family: var(--font-default);
+   font-weight: bold;
+   color: var(--pale-white);
+}
+
+.intro_image img {
+   border-radius: 50%;
+   width: 100%;
+}
