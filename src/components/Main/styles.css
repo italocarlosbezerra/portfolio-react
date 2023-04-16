@@ -17,3 +17,64 @@
    border-radius: 50%;
    width: 100%;
 }
+
+.projects {
+   border-bottom: 1px solid var(--pale-white);
+}
+
+.projects_box {
+   display: flex;
+   align-items: center;
+   justify-content: space-between;
+   padding: 25px 40px 25px 40px;
+}
+
+.boxes {
+   border-radius: 15px;
+   width: 300px;
+   height: 250px;
+   overflow: hidden;
+}
+
+.boxes img {
+   max-width: 100%;
+   height: 100%;
+}
+
+.boxes:hover {
+   border: 1px solid var(--pale-white);
+}
+
+.contact {
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   align-items: center;
+   border-bottom: 1px solid var(--pale-white);
+}
+
+.contact_content {
+   padding: 25px 40px 0 40px;
+   display: flex;
+   flex-direction: column;
+   align-items: center;
+}
+
+.linkedin-wrapper {
+   width: 350px;
+   height: 50px;
+   margin-bottom: 30px;
+   background-color: var(--light-blue);
+
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   text-align: center;
+}
+
+.linkedin-wrapper a {
+   text-decoration: none;
+   color: var(--pale-white);
+   font-size: 18px;
+}

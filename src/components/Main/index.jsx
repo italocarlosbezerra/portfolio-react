@@ -16,7 +16,24 @@ import bannerAcademy from "../../assets/banner_academy.png";
 import bannerProgrammingCode from "../../assets/banner_pragramming_code.jpg";
 import bannerLol from "../../assets/banner_lol.png";
 
+import ProjectCards from "../ProjectCards";
+
 function Main() {
+   const projects = [
+      {
+         link: "https://github.com/italocarlosbezerra/comeia-atividade-02",
+         image: "https://picsum.photos/200/300",
+      },
+      {
+         link: "https://github.com/italocarlosbezerra/softreaming-api",
+         image: "https://picsum.photos/200/300",
+      },
+      {
+         link: "https://github.com/italocarlosbezerra/leagueoflegends-champion-info",
+         image: "https://picsum.photos/200/300",
+      },
+   ];
+
    return (
       <main>
          <section className="intro">
@@ -28,25 +45,16 @@ function Main() {
                </p>
             </div>
             <div className="intro_image">
-               <img
-                  src={greetingSVG}
-                  alt="Greeting"
-               />
+               <img src={greetingSVG} alt="Greeting" />
             </div>
          </section>
-         <section
-            id="about"
-            className="about"
-         >
+         <section id="about" className="about">
             <div className="about_title">
                <p>ABOUT ME</p>
             </div>
             <div className="about_content">
                <div className="about_image">
-                  <img
-                     src={italoPhoto}
-                     alt="Italo's Photo"
-                  />
+                  <img src={italoPhoto} alt="Italo's Photo" />
                </div>
                <div className="about_text">
                   <p>I'm Italo</p>
@@ -57,114 +65,83 @@ function Main() {
                   <p>Technologies that I have experience:</p>
                   <p>
                      <span>
-                        <img
-                           src={javascript}
-                           alt="JavaScript Icon"
-                        />
+                        <img src={javascript} alt="JavaScript Icon" />
                      </span>
                      <span>
-                        <img
-                           src={html5}
-                           alt="HTML5 Icon"
-                        />
+                        <img src={html5} alt="HTML5 Icon" />
                      </span>
                      <span>
-                        <img
-                           src={css3}
-                           alt="CSS3 Icon"
-                        />
+                        <img src={css3} alt="CSS3 Icon" />
                      </span>
                      <span>
-                        <img
-                           src={mysql}
-                           alt="MySQL Icon"
-                        />
+                        <img src={mysql} alt="MySQL Icon" />
                      </span>
                      <span>
-                        <img
-                           src={git}
-                           alt="GIT Icon"
-                        />
+                        <img src={git} alt="GIT Icon" />
                      </span>
                      <span>
-                        <img
-                           src={nodejs}
-                           alt="NodeJS Icon"
-                        />
+                        <img src={nodejs} alt="NodeJS Icon" />
                      </span>
                   </p>
                   <p>Technologies that I have intend to study:</p>
                   <p>
                      <span>
-                        <img
-                           src={typescript}
-                           alt="TypeScript Icon"
-                        />
+                        <img src={typescript} alt="TypeScript Icon" />
                      </span>
                      <span>
-                        <img
-                           src={reactIcon}
-                           alt="React Icon"
-                        />
+                        <img src={reactIcon} alt="React Icon" />
                      </span>
                      <span>
-                        <img
-                           src={reactNative}
-                           alt="React Native Icon"
-                        />
+                        <img src={reactNative} alt="React Native Icon" />
                      </span>
                      <span>
-                        <img
-                           src={aws}
-                           alt="AWS Icon"
-                        />
+                        <img src={aws} alt="AWS Icon" />
                      </span>
                   </p>
                </div>
             </div>
          </section>
-         <section
-            id="projects"
-            className="projects"
-         >
+         <section id="projects" className="projects">
             <div className="projects_title">
                <p>PROJECTS</p>
             </div>
             <div className="projects_box">
-               <div className="boxes">
-                  <a
-                     href="https://github.com/italocarlosbezerra/comeia-atividade-02"
-                     target="_blank"
-                  >
-                     <img
-                        src={bannerAcademy}
-                        alt="Projeto Github"
-                     />
+               {projects.map(project => (
+                  <ProjectCards link={project.link} image={project.image}></ProjectCards>
+               ))}
+            </div>
+         </section>
+         <section id="contact" className="contact">
+            <div className="contact_title">
+               <p>CONTACT</p>
+            </div>
+            <div className="contact_content">
+               <div className="linkedin-wrapper">
+                  <a href="https://www.linkedin.com/in/italocarlosbezerra/" target="_blank">
+                     LinkedIn
                   </a>
                </div>
-               <div className="boxes">
-                  <a
-                     href="https://github.com/italocarlosbezerra/softreaming-api"
-                     target="_blank"
-                  >
-                     <img
-                        src={bannerProgrammingCode}
-                        alt="Projeto Github"
-                     />
-                  </a>
-               </div>
-               <div className="boxes">
-                  <a
-                     href="https://github.com/italocarlosbezerra/leagueoflegends-champion-info"
-                     target="_blank"
-                  >
-                     <img
-                        src={bannerLol}
-                        alt="Projeto Github"
-                     />
+               <div className="linkedin-wrapper">
+                  <a href="https://github.com/italocarlosbezerra" target="_blank">
+                     Github
                   </a>
                </div>
             </div>
+            <form>
+               <label>Nome</label>
+               <input type="text" id="f-name" placeholder="Informe o seu nome" minlength="3" maxlength="12" required />
+
+               <label>Email</label>
+               <input type="email" id="f-email" placeholder="exemplo@exemplo.com.br" required />
+
+               <label>Telefone</label>
+               <input type="tel" id="f-phone" placeholder="(81) 9 9999-9999" minlength="11" maxlength="11" required />
+
+               <label>Mensagem</label>
+               <textarea id="f-message" cols="30" rows="10" placeholder="Digite sua mensagem" required></textarea>
+
+               <input type="submit" id="f-button" value="Enviar" />
+            </form>
          </section>
       </main>
    );
