@@ -14,7 +14,6 @@ import reactNative from "../../assets/react_native.svg";
 import aws from "../../assets/amazon_aws.svg";
 
 import ProjectCards from "../ProjectCards";
-import projects from "./Projects.json";
 
 function Main() {
    const [nameValue, setNameValue] = useState("");
@@ -36,6 +35,21 @@ function Main() {
 
       window.open(url, "_blank");
    }
+
+   const projects = [
+      {
+         link: "https://github.com/italocarlosbezerra/comeia-atividade-02",
+         image: "https://i.ibb.co/ZmR64yB/banner-academy.png",
+      },
+      {
+         link: "https://github.com/italocarlosbezerra/softreaming-api",
+         image: "https://i.ibb.co/bW5HzNb/banner-pragramming-code.jpg",
+      },
+      {
+         link: "https://github.com/italocarlosbezerra/leagueoflegends-champion-info",
+         image: "https://i.ibb.co/n1RwML8/banner-lol.png",
+      },
+   ];
 
    return (
       <main>
